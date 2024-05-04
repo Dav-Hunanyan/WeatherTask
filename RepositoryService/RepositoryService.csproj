@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GlobalVariables\GlobalVariables.csproj" />
+    <ProjectReference Include="..\Weather.Dal\Weather.Dal.csproj" />
+    <ProjectReference Include="..\WeatherCore\WeatherCore.csproj" />
+  </ItemGroup>
+
+</Project>
