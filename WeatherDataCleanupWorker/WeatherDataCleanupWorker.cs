@@ -22,11 +22,11 @@ namespace Worker
 
             while (!stoppingToken.IsCancellationRequested)
             {
-                var workHourString = configuration.GetValue<int>("WeatherDataCleanup:WorkHour");
+                var workHour = configuration.GetValue<int>("WeatherDataCleanup:WorkHour");
                 var oldDaysCount = configuration.GetValue<int>("WeatherDataCleanup:OldDaysCount");
                 var currentTime = DateTime.Now;
 
-                var nextRunTime = new DateTime(currentTime.Year, currentTime.Month, currentTime.Day, workHourString, 0, 0);
+                var nextRunTime = new DateTime(currentTime.Year, currentTime.Month, currentTime.Day, workHour, 0, 0);
                 if (currentTime > nextRunTime)
                 {
                     nextRunTime = nextRunTime.AddDays(1);

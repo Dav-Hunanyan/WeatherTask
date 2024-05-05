@@ -10,7 +10,6 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
-builder.Services.AddScoped<BaseRepository>();
 builder.Services.AddScoped<IWeatherRepository, WeatherRepository>();
 
 // Configure the HTTP request pipeline.

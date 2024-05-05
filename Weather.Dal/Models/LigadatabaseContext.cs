@@ -35,6 +35,7 @@ public partial class LigadatabaseContext : DbContext
 
             entity.HasMany(c => c.WeatherDayDetails)
                   .WithOne(e => e.Day)
+                  .HasForeignKey(d => d.DayId)
                   .OnDelete(DeleteBehavior.SetNull);
         });
 
